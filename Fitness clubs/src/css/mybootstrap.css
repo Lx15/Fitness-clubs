@@ -1,0 +1,57 @@
+.img-center{
+	width:100%;
+}
+.panel{
+	font-family: "微软雅黑";
+}
+.block{
+	display:block;
+}
+.m-t{
+	margin-top: 15px;
+}
+.m-t-lg{
+	margin-top: 50px;
+}
+.m-t-none{
+	margin-top: 0px;
+}
+.m-b{
+	margin-bottom: 15px;
+}
+.m-b-md{
+	margin-bottom: 20px;
+}
+.w{
+	width: 200px;
+}
+.w-xxl{
+	width: 500px;
+}
+.wrapper{
+	padding:15px;
+}
+.navbar-brand{
+	text-align: center;
+	line-height: 20px;
+	font-family: "微软雅黑";
+	font-size: 30px;
+	padding:0 0px;
+	float: none;
+}
+.no-border{
+	border-width:0px;
+	border-color:transparent;
+}
+.line{
+	margin: 30px;
+}
+input.ng-invalid{
+	border:1px solid red;
+}
+input.ng-valid{
+	border:1px solid green;
+}
+.error{
+	font-style: red;
+}

@@ -1,0 +1,86 @@
+    <div class="container w-xxl m-t-lg " ng-controller="SignupFormController" >
+      <a href class="navbar-brand block m-t">{{app.name}}</a>
+      <div class="m-b">
+        <div class="wrapper text-center">
+          <strong>Sign up to find interesting thing</strong>
+        </div>
+        <form name="form" novalidate class="form-validation">
+          <div class="text-danger wrapper text-center" ng-show="authError">
+            {{authError}}
+          </div>
+<!--           ng-pattern="/^[a-zA-Z0-9]$/"
+-->          <div class="list-group ">
+<div class="list-group-item">
+  <input type="text" placeholder="Name" name="Name" class="form-control no-border "  ng-model="user.name" ng-minlength="3" maxlength="10" ensure-unique="Name" ng-pattern="/^[a-zA-Z]$/"  required>
+  <div class="error-container" 
+      ng-show="form.Name.$dirty && form.Name.$invalid">
+    <small class="error" 
+      ng-show="form.Name.$error.required">
+      Your name is required.
+    </small>
+    <small class="error" 
+    ng-show="form.Name.$error.minlength">
+    Your name is required to be at least 3 characters.
+    </small>
+    <small class="error" 
+    ng-show="form.Name.$error.maxlength">
+    Your name cannot be longer than 20 characters.
+    </small>
+    <small class="error" ng-show="form.Name.$invalid">请输入数字或字母</small>
+    <small class="error"
+    ng-show="form.Name.$error.unique">That name is taken,please try another.
+    </small>
+  </div>
+</div>          
+<div class="list-group-item">
+  <input type="email" name="email"placeholder="Email" class="form-control no-border " ng-model="user.email" 
+  ng-minlength="3" maxlength="10"  required>
+  <div class="error-container" 
+  ng-show="form.email.$dirty && form.email.$invalid">
+  <small class="error" 
+  ng-show="form.email.$error.required">
+  Your email is required.
+</small>
+<small class="error" 
+ng-show="form.email.$error.minlength">
+Your email is required to be at least 3 characters.
+</small>
+<small class="error" 
+ng-show="form.email.$error.email">
+That is not a valid email. Please input a valid email.
+</small>
+<small class="error" 
+ng-show="form.email.$error.maxlength">
+Your email cannot be longer than 20 characters
+</small>
+</div>
+</div>                              
+<div class="list-group-item">
+ <input type="password" placeholder="Password" class="form-control no-border" name="password" ng-model="user.password" ng-minlength="3" maxlength="10"  required>
+</div>
+<div class="list-group-item">
+  <input type="password" placeholder="Confirm Password" class="form-control no-border" name="confirm_password" ng-model="confirm_password" ui-validate=" '$value==user.password' " ui-validate-watch=" 'user.password' " required >
+
+  <div class="error-container" ng-show="form.confirm_password.$dirty && form.confirm_password.$invalid">
+    <small class="error" ng-show='form.confirm_password.$error.validator'>Passwords do not match!</small>
+  </div>
+</div>
+</div>
+</div>
+<div class="checkbox m-b-md m-t-none">
+  <label class="i-checks">
+    <input type="checkbox" ng-model="agree" required><i></i> Agree the <a href>terms and policy</a>
+  </label>
+</div>
+<!--  ng-disabled='form.$invalid'-->
+<button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="signUp()"  ng-disabled="form.$invalid">Sign up</button>
+<div class="line "></div>
+<p class="text-center"><small>Already have an account?</small></p>
+<a ui-sref="signin" class="btn btn-lg btn-default btn-block">Sign in</a>
+</form>
+</div>
+<div class="text-center" ng-include="'tpl/page_footer.html'">
+  {% include 'page_footer.html' %}
+</div>
+
+</div>
