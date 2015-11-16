@@ -1,0 +1,107 @@
+
+    <!--     <div class="container" >    
+    -->
+    <div class="row" >
+      <div class="col-md-3">
+        <!--collapse-->    
+        <div >
+          <ul class="nav nav-pills nav-stacked">
+            <li class="active">
+              <a ui-sref="app.zone.page({zoneID:defaultZone,pageID:0})">全部区域</a>
+            </li>
+          </ul>
+        </div>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default" ng-repeat="zone in index">
+            <div class="panel-heading" role="tab" id="{{'heading_'+zone.id}}">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" data-target="{{'#collapse_'+zone.id}}" aria-expanded="false" aria-controls="{{'collapse_'+zone.id}}">{{zone.name}}</a>
+              </h4>
+            </div>
+            <div id="{{'collapse_'+zone.id}}" class="panel-collapse collapse" ng-class="{in:$index===0}" role="tabpanel" aria-expanded="false" aria-labelledby="{{'heading_'+zone.id}}">
+              <div class="panel-body">
+                <div  ng-repeat="fitness in zone.fitnesses">
+                  <li>
+                    <a ui-sref="app.zone.detail({fitness:fitness})">{{fitness}}</a>
+                  </li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/collapse--> </div>
+
+      <div class="col-md-6">
+        <div  id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
+          <!-- Indicators -->
+          <ol class="carousel-indicators" >
+            <li ng-repeat="carousel in carousels" data-target="#carousel-example-generic" data-slide-to="{{carousel}}" ng-class="{true:'active'}[carousel==0]" ></li>
+          </ol>
+       <!-- Wrapper for slides --> 
+          <div class="carousel-inner" role="listbox" >
+            <div class="item" ng-repeat="maincarousel in maincarousels" ng-class="{true:'active'}[maincarousel.id=='1']">
+              <img src="{{maincarousel.img}}" class="img_center">    
+              <div class="carousel-caption">
+                <h1>{{maincarousel.title}}</h1>
+              </div>
+            </div>
+          </div>
+      <!-- Controls -->    
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    </div>
+    <div class="col-md-3" >
+    <div class="panel panel-primary">
+      <div class="panel-heading">关于网站</div>
+      <div class="panel-body">
+        <p> <strong>欢迎来到西安健身资讯网！</strong>
+        </p>
+        <p>在这里你可以获得西安全部的健身资讯，其中包括各种健身房、工作室···</p>
+        <p>在这里快开始你的健身之旅吧~~~</p>
+      </div>
+      <div class="panel-footer">
+        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=230%C3%97168&w=230&h=168"></div>
+    </div>
+    </div>
+    </div>
+
+    <!--mainpage_footerbar-->    
+
+    <div class="row" >
+    <div class="col-md-4" ng-repeat="mainfooter in mainfooters">
+    <div class="panel " ng-class="{true:'panel-success',false:'panel-info'}[mainfooter.title=='最新资讯']">
+      <div class="panel-heading">{{mainfooter.title}}</div>
+      <div class="panel-body" style="height: 120px;overflow-y:auto;">
+        <ul>
+          <div  ng-repeat="footercontent in mainfooter.content">
+            <li>
+              <a ui-sref="app.footer">{{footercontent}}</a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+    </div>
+    <div class="col-md-4">
+    <div class="panel panel-warning">
+      <div class="panel-heading">联系我们</div>
+      <div class="panel-body">
+        <ul>
+          <div style="height: 80px;overflow-y:auto;">
+            <li>cell:xxx-xxxx-xxx</li>
+            <br/>    
+            <br/>    
+            <li>地址:xxx-xxx-xxx</li>
+          </div>
+        </ul>
+      </div>
+    </div>
+    </div>
+    </div>

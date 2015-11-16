@@ -1,32 +1,57 @@
 
 <!--navbar header-->
 <div class="navbar navbar-default" role="navigation">
-  <div class="container">
-   <div class="row">
-     <div class="col-md-4">
-      <div class="navbar-header">
-        <a href="#/app" class="navbar-brand"><span class="glyphicon glyphicon-heart"></span>
-          西安健身资讯网</a>
+  <div class="container" >
+    <div class="row">
+      <div class="col-md-4">
+        <div class="navbar-header">
+          <a href="#/app" class="navbar-brand">
+            <span class="glyphicon glyphicon-heart"></span>
+            西安健身资讯网
+          </a>
         </div>
-      </div>   
-      <div class="col-md-6">
-        <ul class="nav navbarnav">
-
-        </ul>
-        <form action=" " class="navbar-form navbar-left" role="search">
+      </div>
+      <div class="col-md-6"   >
+        <ul class="nav navbarnav"></ul>
+        <form  class="navbar-form navbar-left" role="search" >
           <div class="form-group">
             <span class="glyphicon glyphicon-search"></span>
-            <input type="text" class="form-control " placeholder="请输入查找名称、地址"/>
+            <input type="text" class="form-control glyphicon glyphicon-search"  placeholder="请输入查找名称、地址"/>
           </div>
-          <button type="submit" class="btn btn-default">搜索</button>
+          <button type="submit" class="btn btn-default" >搜索</button>
         </form>
       </div>
       <div class="col-md-2">
-      <div style="margin-top: 8px;">
+        <div ng-show="isDefault" class="m-t-sm">
           <a ui-sref="signup" class="btn btn-default">注册</a>
-          <span>|</span>     
+          <span>|</span>
           <a ui-sref="signin" class="btn btn-default">登录</a>
         </div>
+        <div ng-show="isLogin">
+          <div class="dropdown m-r " >
+            <a href class="dropdown-toggle" data-toggle="dropdown">
+              <span  class="pull-right ">
+                <img src="https://placeholdit.imgix.net/~text?txtsize=10&txt=50%C3%9750&w=50&h=50" alt="avatar">
+              </span>
+              <span class=" m-t pull-right" >
+                xxx
+              <span class="caret"></span>
+              </span>
+            </a>
+            <!--dropdown-->
+               <ul class="dropdown-menu m-t-lg "  role="menu" >
+                <li class="m-t ">
+                  <a ui-sref="app.profile">我的资料</a>
+                </li>
+                <li class="divider"></li>
+                <li class="m-b ">
+                  <a  type="button" ng-click="backUp()">退出</a>
+                </li>
+              </ul>
+            <!--/dropdown-->
+         </div>
+        </div>
+
       </div>
 
     </div>

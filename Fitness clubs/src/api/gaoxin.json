@@ -1,0 +1,54 @@
+	 {
+		"zone":"碑林区",
+		"count":9,
+		"list": [
+			{
+				"name": "超越健身_0",
+				"img": "https://placeholdit.imgix.net/~text?txtsize=33&txt=600%C3%97400&w=600&h=400",
+				"alt": "0",
+				"url": ""
+			}, {
+				"name": "超越健身_1",
+				"img": "https://placeholdit.imgix.net/~text?txtsize=33&txt=600%C3%97400&w=600&h=400",
+				"alt": "1",
+				"url": ""
+			},
+			{
+				"name": "超越健身_2",
+				"img": "https://placeholdit.imgix.net/~text?txtsize=33&txt=600%C3%97400&w=600&h=400",
+				"alt": "2",
+				"url": ""
+			}, {
+				"name": "超越健身_3",
+				"img": "https://placeholdit.imgix.net/~text?txtsize=33&txt=600%C3%97400&w=600&h=400",
+				"alt": "3",
+				"url": ""
+			},
+			{
+				"name": "超越健身_4",
+				"img": "https://placeholdit.imgix.net/~text?txtsize=33&txt=600%C3%97400&w=600&h=400",
+				"alt": "4",
+				"url": ""
+			}, {
+				"name": "超越健身_5",
+				"img": "https://placeholdit.imgix.net/~text?txtsize=33&txt=600%C3%97400&w=600&h=400",
+				"alt": "5",
+				"url": ""
+			}, {
+				"name": "超越健身_6",
+				"img": "https://placeholdit.imgix.net/~text?txtsize=33&txt=600%C3%97400&w=600&h=400",
+				"alt": "5",
+				"url": ""
+			}, {
+				"name": "超越健身_7",
+				"img": "https://placeholdit.imgix.net/~text?txtsize=33&txt=600%C3%97400&w=600&h=400",
+				"alt": "5",
+				"url": ""
+			}, {
+				"name": "超越健身_8",
+				"img": "https://placeholdit.imgix.net/~text?txtsize=33&txt=600%C3%97400&w=600&h=400",
+				"alt": "5",
+				"url": ""
+			}
+		]
+	}

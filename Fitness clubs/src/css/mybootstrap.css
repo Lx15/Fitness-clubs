@@ -1,11 +1,38 @@
+.animated{
+	animation-duration:1s;
+	animation-fill-mode:both;
+}
+.app-header{
+	position: fixed;
+	top: 0;
+	width: 79%;
+	z-index:1000;
+	
+}
+.app-content-full{
+	/*position:absolute;*/
+	margin-top:75px;
+	width: auto !important;
+	height: auto;
+}
+.fadeInRight{
+	animation-name:fadeInRight;
+}
 .img-center{
 	width:100%;
+}
+.in{
+	height:113px;
+	overflow-y:auto;
 }
 .panel{
 	font-family: "微软雅黑";
 }
 .block{
 	display:block;
+}
+.m-t-sm{
+	margin-top: 8px;
 }
 .m-t{
 	margin-top: 15px;
@@ -22,6 +49,9 @@
 .m-b-md{
 	margin-bottom: 20px;
 }
+.m-r{
+	margin-right: 15px;
+}
 .w{
 	width: 200px;
 }
@@ -36,8 +66,8 @@
 	line-height: 20px;
 	font-family: "微软雅黑";
 	font-size: 30px;
-	padding:0 0px;
-	float: none;
+/*	padding:0 0px;
+*/	float: none;
 }
 .no-border{
 	border-width:0px;

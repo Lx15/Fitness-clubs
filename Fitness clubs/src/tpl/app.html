@@ -1,14 +1,18 @@
 
-
-
 <div class="container">
 	<!--navbar-->
-	<div data-ng-include=" 'tpl/header.html' "></div>
-<!--/navbar>
+	<div data-ng-include=" 'tpl/header.html' " class="app-header"></div>
+	<!--/navbar>
 	<!-content-->
-	<div data-ng-include=" 'tpl/content.html' "></div>
-<!--/content>
-	<!---footerbar-->
-	<div data-ng-include=" 'tpl/footerbar.html' "></div>
-	<!--/footerbar-->	
+	<div class="app-content app-content-full">
+		<div ui-butterbar></div>
+		<div  ui-view></div>
+	</div>
+	<!--/content>
+	<!--footerbar-->
+	<div class="app-footer wrapper b-t bg-light">
+		<span class="pull-right">{{app.name}}</span>
+		&copy; 2015 Copyright.
+	</div>
+	<!--/footerbar-->
 </div>

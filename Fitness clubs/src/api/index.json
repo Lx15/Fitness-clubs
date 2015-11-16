@@ -1,0 +1,86 @@
+ [{
+ 	"name": "碑林区",
+ 	"id": "beilin",
+ 	"pageNum": 4,
+ 	"fitnesses": [
+ 		"chaoyue_0",
+ 		"chaoyue_1",
+ 		"chaoyue_2",
+ 		"chaoyue_3",
+ 		"chaoyue_4",
+ 		"chaoyue_5",
+ 		"chaoyue_6",
+ 		"chaoyue_7",
+ 		"chaoyue_8",
+ 		"chaoyue_9",
+ 		"chaoyue_10"
+ 	]
+ }, {
+ 	"name": "雁塔区",
+ 	"id": "yanta",
+ 	"pageNum": 4,
+ 	"fitnesses": [
+ 		"chaoyue_0",
+ 		"chaoyue_1",
+ 		"chaoyue_2",
+ 		"chaoyue_3",
+ 		"chaoyue_4",
+ 		"chaoyue_5",
+ 		"chaoyue_6",
+ 		"chaoyue_7",
+ 		"chaoyue_8",
+ 		"chaoyue_9",
+ 		"chaoyue_10"
+ 	]
+ }, {
+ 	"name": "高新区",
+ 	"id": "gaoxin",
+ 	"pageNum": 4,
+ 	"fitnesses": [
+ 		"chaoyue_0",
+ 		"chaoyue_1",
+ 		"chaoyue_2",
+ 		"chaoyue_3",
+ 		"chaoyue_4",
+ 		"chaoyue_5",
+ 		"chaoyue_6",
+ 		"chaoyue_7",
+ 		"chaoyue_8",
+ 		"chaoyue_9",
+ 		"chaoyue_10"
+ 	]
+ }, {
+ 	"name": "新城区",
+ 	"id": "xincheng",
+ 	"pageNum": 4,
+ 	"fitnesses": [
+ 		"chaoyue_0",
+ 		"chaoyue_1",
+ 		"chaoyue_2",
+ 		"chaoyue_3",
+ 		"chaoyue_4",
+ 		"chaoyue_5",
+ 		"chaoyue_6",
+ 		"chaoyue_7",
+ 		"chaoyue_8",
+ 		"chaoyue_9",
+ 		"chaoyue_10"
+ 	]
+ }, {
+ 	"name": "莲湖区",
+ 	"id": "lianhu",
+ 	"pageNum": 4,
+ 	"fitnesses": [
+ 		"chaoyue_0",
+ 		"chaoyue_1",
+ 		"chaoyue_2",
+ 		"chaoyue_3",
+ 		"chaoyue_4",
+ 		"chaoyue_5",
+ 		"chaoyue_6",
+ 		"chaoyue_7",
+ 		"chaoyue_8",
+ 		"chaoyue_9",
+ 		"chaoyue_10"
+ 	]
+ }]
