@@ -25,33 +25,46 @@ angular.module('app')
 					controller: ['$scope', '$rootScope', '$http',
 						function($scope, $rootScope, $http) {
 							$scope.defaultZone = 'beilin';
-							$scope.carousels=[];
+							$scope.carousels = [];
 
 							$http.get('api/index.json')
 								.success(function(data) {
 									$rootScope.index = data;
 								});
 							$http.get('api/index_footer.json')
-							    .success(function(data){
-							    	$scope.mainfooters=data;
-							    });
+								.success(function(data) {
+									$scope.mainfooters = data;
+								});
 							$http.get('api/index_carousel.json')
-							    .success(function(data){
-							     	$scope.maincarousels=data;
-							     	$scope.carousels=[];
-							     	for(var j=0;j<$scope.maincarousels.length;j++){
-							     		$scope.carousels.push(j);
-							     	}
-							     });
+								.success(function(data) {
+									$scope.maincarousels = data;
+									$scope.carousels = [];
+									for (var j = 0; j < $scope.maincarousels.length; j++) {
+										$scope.carousels.push(j);
+									}
+								});
 						}
 					]
 				})
-				.state('app.footer',{
-					url:"/footer",
-					templateUrl:"",
+				.state('app.footer', {
+					url: "/footer",
+					templateUrl: "tpl/mainfooters.html",
 					controller: ['$scope', '$rootScope', '$http',
 						function($scope, $rootScope, $http) {
-						}]
+							$scope.defaultZone = 'beilin';
+							$scope.carousels = [];
+
+							$http.get('api/index.json')
+								.success(function(data) {
+									$rootScope.index = data;
+								});
+							$http.get('api/mainfooters.json')
+								.success(function(data) {
+									$scope.mainfooters = data;
+								})
+
+						}
+					]
 				})
 				.state('app.zone', {
 					abstract: true,
@@ -60,7 +73,7 @@ angular.module('app')
 				})
 				.state('app.zone.detail', {
 					url: '/:fitness',
-					templateUrl:"",
+					templateUrl: "",
 					controller: function() {
 
 					}
@@ -116,9 +129,10 @@ angular.module('app')
 	]
 )
 angular.module('app')
-  .controller('SearchCtrl',['$scope','rootScope','$state',
-    function($scope,$rootScope,$state){
-    	$scope.search=function(keywd){
-    	  $state.go('app.zone.page({zoneID:keywd,pageID:0})');
-    	}
-    }]);
+	.controller('SearchCtrl', ['$scope', 'rootScope', '$state',
+		function($scope, $rootScope, $state) {
+			$scope.search = function(keywd) {
+				$state.go('app.zone.page({zoneID:keywd,pageID:0})');
+			}
+		}
+	]);
